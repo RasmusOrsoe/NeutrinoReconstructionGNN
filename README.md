@@ -78,6 +78,12 @@ To test our initial thought that the edge_index needed to be consistent across g
 
 <h2>The Graph Neural Network</h2>
 
+This was our first time tinkering with the torch_geometric package. Models are built layer-wise, which adds a lot of freedom to tailor your model to your problem. It also means, however, that it is up to you as the programmer to make sure that the data is passed through layers that changes the dimensionality of the data such that it eventually becomes comparable with your target-values. Heres a rough breakdown:
+1) Pooling layers changes the rows of the x-tensor (but by a fraction). 
+2) Convolutional layers changes the columns of the x-tensor (But allows you to set a specific size).
+
+There exists other layers that changes these dimensions, one example of this is torch.nn.linear, which changes columns of the x-tensor.
+
 After experimenting with a wide range of layers and configurations, we eventually settled for two models. 
 
 1) The Linear Model
