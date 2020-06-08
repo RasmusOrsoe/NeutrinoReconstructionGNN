@@ -1,9 +1,11 @@
 # -*- coding: utf-8 -*-
 import pandas as pd
 import time
+###
+### HERE THE BARE-GRAPHS ARE PADDED WITH 0's TO MAKE UP FOR THE DIFFERENCE IN NODE NUMBERS
+### THAT ARISES FROM THE FACT THAT SOME DOMS MEASURE SOMETHING MORE THAN ONCE DURING 1 EVENT
 scalar =  pd.read_csv('C:\\applied_ML\\final_project\\data\\scalar.csv')
 scalar = scalar.loc[:,scalar.columns[1:len(scalar.columns)]]
-
 events = scalar['event_no'][0:150000]
 count = 1
 now = time.time()
