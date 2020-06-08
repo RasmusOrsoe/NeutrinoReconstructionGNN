@@ -35,11 +35,11 @@ This defines 4 nodes with two node features each. Now one must define how these 
                            [1, 0, 1, 3, 2]], dtype=torch.long)
 ``` 
 This edge_index says that: 
-a) node 0 is connected to node 1
-b) node 1 is connected to node 0
-c) node 2 is connected to node 1
-d) node 0 is connected to node 3
-e) node 3 is connected to node 2
+node 0 is connected to node 1.
+node 1 is connected to node 0.
+node 2 is connected to node 1
+node 0 is connected to node 3
+node 3 is connected to node 2
 
 
 <h2>Example of code</h2>
