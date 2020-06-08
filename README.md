@@ -76,6 +76,20 @@ We eventually settled on a simple but consistent edge_index scheme: The conga-li
 
 To test our initial thought that the edge_index needed to be consistent across graphs, we tried to develop the worst possible edge_index: A random one! Instead of assigning the nodes edges in a consistent way, we would, for each node in a single graph, generate 4 random connections to other nodes in the graph. This way, the resulting edge_index would be quite random in graphs and across graphs. This is done in \tools\CreateRandomGraphs.py.
 
+<h2>The Graph Neural Network</h2>
+
+After experimenting with a wide range of layers and configurations, we eventually settled for two models. 
+
+1) The Linear Model
+2) The Non-Linear Model
+
+The linear model consists of three TopKPooling-layers and two torch.nn.linear-layers. Initially we had dropout-layers and f.relu-activation layers, but through testing we found that the dropout-layer decreased accuracy quite a bit and that the relu-activation function messed up predictions on position and direction. The non-linear model is configured quite similar, but has neural layers based on torch.nn.RNNCell. 
+
+You can find the script running the linear model on the conga edge configuration at \models\LinearModel\LinearModelConga.py and the linear model on the random edge configuration at \models\LinearModel\LinearModelRan.py.
+
+You can find the comparison of the edge configurations in the slides.
+
+
 
 
 
