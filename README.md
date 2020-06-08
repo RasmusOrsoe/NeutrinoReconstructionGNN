@@ -21,7 +21,7 @@ As mentioned in the torch_geometric documentation (https://pytorch-geometric.rea
 
 To build a single graph you need two things: 
 1) Node Features, called x. x must be structured as [N_nodes,N_node_features]
-2) Edges, called edge_index. The edge_index is a torch.tensor containing the information regarding how the graphs are connected.  
+2) Edges, called edge_index. The edge_index is a torch.tensor containing the information regarding how the nodes are connected.  
 
 Take a look the code below:
 ```html
