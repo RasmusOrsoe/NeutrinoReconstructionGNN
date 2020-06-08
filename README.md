@@ -1,12 +1,10 @@
 
-Neutrino Reconstruction using Graph Neural Networks
-
-
-This file is a quick, technical walkthrough of the final project 'Neutrino Reconstruction using Graph Neural Networks' by Peter Bagnegaard and Rasmus F. Ørsøe as part of the Big Data course at NBI 2020. 
-
-Note: To run these python files you'll need the 120000.db, 140000.db and 160000.db source data files, which are NOT included in this github repo.
-
-Understanding the data (\tools\DisplayEvents.py)
+<h1><strong>Neutrino Reconstruction using Graph Neural Networks</strong></h1>
+<p>This file is a quick, technical walkthrough of the final project 'Neutrino Reconstruction using Graph Neural Networks' by Peter Bagnegaard and Rasmus F. &Oslash;rs&oslash;e as part of the Big Data course at NBI 2020.</p>
+<p><strong>Note:</strong> To run these python files you'll need the 120000.db, 140000.db and 160000.db source data files, which are NOT included in this github repo.</p>
+<h2>Understanding the data (\tools\DisplayEvents.py)</h2>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
 
 The event data consists of 5 primary values: dom_x, dom_y, dom_z, which defines a position in the Ice Cube detector grid. In addition, there's the dom_charge and dom_time, which is the measured electrical charge of the dom and the time at which the measurement was made.
 
