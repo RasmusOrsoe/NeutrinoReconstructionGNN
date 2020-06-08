@@ -2,6 +2,9 @@
 <h1><strong>Neutrino Reconstruction using Graph Neural Networks</strong></h1>
 <p>This file is a quick, technical walkthrough of the final project 'Neutrino Reconstruction using Graph Neural Networks' by Peter Bagnegaard and Rasmus F. &Oslash;rs&oslash;e as part of the Big Data course at NBI 2020.</p>
 <p><strong>Note:</strong> To run these python files you'll need the 120000.db, 140000.db and 160000.db source data files, which are NOT included in this github repo.</p>
+
+<p><strong>The python files contains additional comments.</strong></p>
+
 <h2>Understanding the data (\tools\DisplayEvents.py)</h2>
 <p>&nbsp;</p>
 <p>&nbsp;</p>
