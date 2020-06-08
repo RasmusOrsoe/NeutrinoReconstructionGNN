@@ -42,13 +42,10 @@ This can now be compiled into the Data-format via:
     graph = Data(x = x, edge_index = edge_index)
 ``` 
 This is now considered a graph by torch_geometric. In total we have:
-
-<h2>Simple Graph</h2>
-
 <pre>
     <div class="container">
         <div class="block two first">
-            <h2>Your title</h2>
+            <h2>Simple Graph</h2>
             <div class="wrap">
             from torch_geometric.data import Data
             x = torch.tensor([[2,1], [5,6], [3,7], [12,0]], dtype=torch.float)
