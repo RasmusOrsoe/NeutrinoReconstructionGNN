@@ -21,7 +21,7 @@ the right way to go about this is to define a custom dataset class for your data
 
 As mentioned in the torch_geometric documentation (https://pytorch-geometric.readthedocs.io/en/latest/notes/create_dataset.html), the dataset-class is not strictly needed in order for your data to comply with the torch_geometric formalism. You can do batching as long as your data is structured as a list of Data-objects. This is the route we took and therefore the one we'll explain below.
 
-To build a single graph you need three things: 
+To build a single graph you need two things: 
 1) Node Features, called x. x must be structured as [N_nodes,N_node_features]
 2) Edges, called edge_index. The edge_index is a torch.tensor containing the information regarding how the graphs are connected.  
 
@@ -36,15 +36,25 @@ This defines 4 nodes with two node features each. Now one must define how these 
 ``` 
 <p>This edge_index says that: <br />node 0 is connected to node 1.<br />node 1 is connected to node 0.<br />node 2 is connected to node 1<br />node 0 is connected to node 3<br />node 3 is connected to node 2</p>
 
+This can now be compiled into the Data-format via:
+```html
+    from torch_geometric.data import Data
+    graph = Data(x = x, edge_index = edge_index)
+``` 
+This is now considered a graph by torch_geometric. In total we have:
 
-<h2>Example of code</h2>
+<h2>Simple Graph</h2>
 
 <pre>
     <div class="container">
         <div class="block two first">
             <h2>Your title</h2>
             <div class="wrap">
-            //Your content
+            from torch_geometric.data import Data
+            x = torch.tensor([[2,1], [5,6], [3,7], [12,0]], dtype=torch.float)
+            edge_index = torch.tensor([[0, 1, 2, 0, 3],
+                           [1, 0, 1, 3, 2]], dtype=torch.long)
+            graph = Data(x = x, edge_index = edge_index)
             </div>
         </div>
     </div>
