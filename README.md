@@ -49,7 +49,22 @@ This is now considered a graph by torch_geometric. In total we have:
                    [1, 0, 1, 3, 2]], dtype=torch.long)
     graph = Data(x = x, edge_index = edge_index)
 ```
+If one wanted to make batch of graphs for training, one could do so by first making a list()-object containing Data-objects like graph in the code above. To turn it into batches, we need to use torch_geometric.data.DataLoader :
 
-
-
+```html
+    from torch_geometric.data import Data
+    from torch_geometric.data import DataLoader
+    x = torch.tensor([[2,1], [5,6], [3,7], [12,0]], dtype=torch.float)
+    edge_index = torch.tensor([[0, 1, 2, 0, 3],
+                   [1, 0, 1, 3, 2]], dtype=torch.long)
+    graph = Data(x = x, edge_index = edge_index)
+    
+    list_of_Data_objects = [graph]*64                                               # Repeats graph 64 times in list
+    
+    my_desired_batch_size = 32                                                      # you got this
+    loader = DataLoader(list_of_Data_objects, batch_size = my_desired_batch_size)   # Reads your graphs into DataLoader-format
+    
+    my_batch_of_graphs = next(iter(loader))                                         # Accesses the next batch in the DataLoader
+    
+```
 
