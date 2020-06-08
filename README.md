@@ -34,12 +34,7 @@ This defines 4 nodes with two node features each. Now one must define how these 
     edge_index = torch.tensor([[0, 1, 2, 0, 3],
                            [1, 0, 1, 3, 2]], dtype=torch.long)
 ``` 
-This edge_index says that: 
-node 0 is connected to node 1.
-node 1 is connected to node 0.
-node 2 is connected to node 1
-node 0 is connected to node 3
-node 3 is connected to node 2
+<p>This edge_index says that: <br />node 0 is connected to node 1.<br />node 1 is connected to node 0.<br />node 2 is connected to node 1<br />node 0 is connected to node 3<br />node 3 is connected to node 2</p>
 
 
 <h2>Example of code</h2>
