@@ -10,7 +10,7 @@ The event data consists of 5 primary values: dom_x, dom_y, dom_z, which defines 
 
 To get a more intuitive feel, we've made a plotting function that displays the doms and their location on their strings. You'll find this under \tools\DisplayEvents.py . The script reads the source data files and displays the doms that measured something for the specified event. The plots are 3D, and the colorbar labels time, so purple dots are early measurements and yellowish dots represents some of the last measurements made during the specified events. Points are scaled via the dom_charge variable. There's also the possibility of getting the plots as a sequence, such that you see the points as they are measured. To do this, set the optinal parameter real_time = True.
 
-Building the Graphs
+<h2>Building the Graphs</h2>
 
 Graph Neural Networks adds an extra layer of complexity to your data. In order to use the torch_geometric package, which is the one you want to use for graph neural networking, then you must take your custom data and transform it to the torch_geometric data format. 
 
