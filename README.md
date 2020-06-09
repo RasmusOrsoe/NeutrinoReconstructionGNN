@@ -5,6 +5,9 @@
 
 <p><strong>The python files contains additional comments.</strong></p>
 
+The slides from the presentation can be found here: https://drive.google.com/file/d/1X7bwemvhyGfqq_EpK_2X8CQLL47hiE2z/view?usp=sharing
+
+
 <h2>Understanding the data (\tools\DisplayEvents.py)</h2>
 <p>&nbsp;</p>
 <p>&nbsp;</p>
